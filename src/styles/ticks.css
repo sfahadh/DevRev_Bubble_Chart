@@ -1,8 +1,15 @@
-.ticks {
+.ticks-x {
     height: 100%;
     width: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ticks-y {
+    height: 10px;
+    width: 100%;
+    display: flex;
     justify-content: space-evenly;
 }
 

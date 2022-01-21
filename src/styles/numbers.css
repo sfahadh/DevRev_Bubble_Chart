@@ -1,9 +1,16 @@
-.numbers {
+.numbers-x {
     height: 97.5%;
     width: 10px;
     margin-top: 4px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.numbers-y {
+    height: 10px;
+    width: 97.5%;
+    display: flex;
     justify-content: space-evenly;
 }
 
@@ -13,10 +20,15 @@
     position: relative;
 }
 
-.nums-left {
+.nums-x-left {
     right: 10px;
 }
 
-.nums-right {
+.nums-x-right {
     left: 3px;
+}
+
+.nums-y-top {
+    left: 5px;
+    bottom: 2px;
 }

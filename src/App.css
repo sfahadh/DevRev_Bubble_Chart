@@ -1,5 +1,5 @@
 .graph {
-    width: 1200px;
+    width: 900px;
     height: 600px;
     position: absolute;
     top: 50%;
@@ -38,4 +38,10 @@
 .graph .bottom-right {
     display: flex;
     justify-content: start;
+}
+
+.graph .top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }

@@ -7,14 +7,17 @@ function App() {
 	return (
 		<section className='graph'>
 			<div className='top-left'>
-				<Numbers size={285} direction={'left'} />
-				<Ticks numOfTicks={9} />
+				<Numbers size={285} direction={'left'} axis={"x"} />
+				<Ticks numOfTicks={9} axis={"x"} />
 			</div>
-			<div className='top-right'></div>
+			<div className='top-right'>
+				<Numbers size={285} direction={'top'} axis={"y"} />
+				<Ticks numOfTicks={8} axis={"y"} />
+			</div>
 			<div className='bottom-left'></div>
 			<div className='bottom-right'>
-				<Ticks numOfTicks={9} />
-				<Numbers size={135} direction={'right'} />
+				<Ticks numOfTicks={9} axis={"x"} />
+				<Numbers size={135} direction={'right'} axis={"x"} />
 			</div>
 		</section>
 	);

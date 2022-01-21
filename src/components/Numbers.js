@@ -1,18 +1,25 @@
 import React from 'react';
 import '../styles/numbers.css';
 
-export default function Numbers({ size, direction }) {
+export default function Numbers({ size, direction, axis }) {
     const numList = [];
-    for (let i = size; i >= size - 120; i -= 15) {
-        numList.push(i);
+
+    if (axis === "x") {
+        for (let i = size; i >= size - 120; i -= 15) {
+            numList.push(i);
+        }
+    } else {
+        for (let i = 240; i < 400; i += 20) {
+            numList.push(i);
+        }
     }
 
     return (
-        <section className='numbers'>
+        <section className={`numbers-${axis}`}>
             {
                 new Array(numList.length).fill(null).map((_, i) => {
                     return (
-                        <span className={`nums nums-${direction}`} key={i}>{ numList[i] }</span>
+                        <span className={`nums nums-${axis}-${direction}`} key={i}>{ numList[i] }</span>
                     )
                 })
             }
