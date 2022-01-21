@@ -29,3 +29,8 @@
 .graph .bottom-right, .graph .bottom-left {
     border-bottom: none;
 }
+
+.graph .top-left {
+    display: flex;
+    justify-content: end;
+}

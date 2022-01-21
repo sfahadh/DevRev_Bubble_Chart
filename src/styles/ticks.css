@@ -1,0 +1,11 @@
+.ticks {
+    height: 100%;
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tick-line {
+    border: 1px solid black;
+}
