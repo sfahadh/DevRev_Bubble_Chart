@@ -34,3 +34,8 @@
     display: flex;
     justify-content: end;
 }
+
+.graph .bottom-right {
+    display: flex;
+    justify-content: start;
+}
