@@ -45,3 +45,8 @@
     flex-direction: column;
     justify-content: end;
 }
+
+.graph .bottom-left {
+    display: flex;
+    flex-direction: column;
+}
