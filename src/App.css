@@ -1,8 +1,29 @@
-main {
-    width: 800px;
-    height: 600px;
+.container {
+    width: 820px;
+    height: 620px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+p:nth-child(1) {
+    text-align: center;
+    margin-right: 50px;  /* display flex of graph and headcount p element caused text to slightly be off centered */
+}
+
+.headcount {
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    text-align: center;
+}
+
+main {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
 }

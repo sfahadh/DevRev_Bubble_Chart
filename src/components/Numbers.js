@@ -2,6 +2,12 @@ import React from 'react';
 import '../styles/numbers.css';
 
 export default function Numbers({ size, direction, axis }) {
+    /*
+        numList will contain a list of numbers to show in the graph either 
+        in the x axis or in the y axis
+    */
+
+
     const numList = [];
 
     if (axis === "y") {

@@ -16,11 +16,17 @@ function App() {
 		setData(json);
 	}
 
-	return (
-		<main>
-			<Circles data={data} />
-			<Graph />
-		</main>
+	return (  /* Last minute changes to add description for x and y axis */
+		<div className='container'>
+			<p>Salary</p>
+			<div className='flex'>
+				<main>
+					<Circles data={data} />
+					<Graph />
+				</main>
+				<p className='headcount'>Headcount</p>
+			</div>
+		</div>
 	);
 }
 

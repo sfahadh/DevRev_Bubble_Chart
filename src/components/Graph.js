@@ -4,6 +4,15 @@ import Numbers from './Numbers';
 import '../styles/graph.css';
 
 export default function Graph() {
+    /*
+        Numbers component will generate the numbers displayed in graph
+        Ticks component will generate the small lines right next to the numbers
+
+        size and numOfTicks are hardcoded so graph may not scale well
+        A possible solution to fix this issue is finding the minimum and maximum in the dataset
+        and then using those values to set the boundaries for the graph
+    */
+
     return (
         <section className='graph'>
             <div className='top-left'>

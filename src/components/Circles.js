@@ -1,13 +1,17 @@
 import React from 'react';
 
 export default function Circles({ data }) {
-    const dataCopy = data.slice(0, 1);
-    console.log(dataCopy);
-    
+    /*
+        background color of circles are as randomized as much as possible within
+        the 0 - 255 rgb range
+
+        compration represents circle size
+    */
+
     return (
         <div>
             {
-                data.map(({ title, salary, compratio, headcount }) => {
+                data.map(({ title, salary, compratio, headcount }) => {  
                     const rgbR = (salary % 255 * Math.random() + compratio) % 255;
                     const rgbB = (compratio % 255 * Math.random() + headcount) % 255;
                     const rgbG = (headcount % 255 * Math.random() + salary) % 255;
