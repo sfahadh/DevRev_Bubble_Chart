@@ -13,7 +13,6 @@ function App() {
 	const fetchData = async () => {
 		const resp = await fetch("https://mocki.io/v1/18936d28-2f79-4840-b146-5622e8ad1e77");
 		const json = await resp.json();
-		console.log(json);
 		setData(json);
 	}
 
