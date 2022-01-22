@@ -1,28 +1,27 @@
-import React from 'react';
-import Ticks from './components/Ticks';
-import Numbers from './components/Numbers';
+import React, { useEffect, useState } from 'react';
+import Circles from './components/Circles';
+import Graph from './components/Graph';
 import './App.css';
 
 function App() {
+	const [data, setData] = useState([]);
+
+	useEffect(() => {
+		fetchData();
+	}, []);
+
+	const fetchData = async () => {
+		const resp = await fetch("https://mocki.io/v1/18936d28-2f79-4840-b146-5622e8ad1e77");
+		const json = await resp.json();
+		console.log(json);
+		setData(json);
+	}
+
 	return (
-		<section className='graph'>
-			<div className='top-left'>
-				<Numbers size={285} direction={'left'} axis={"y"} />
-				<Ticks numOfTicks={9} axis={"y"} />
-			</div>
-			<div className='top-right'>
-				<Numbers size={220} direction={'top'} axis={"x"} />
-				<Ticks numOfTicks={9} axis={"x"} />
-			</div>
-			<div className='bottom-left'>
-				<Ticks numOfTicks={9} axis={"x"} />
-				<Numbers size={20} direction={'bottom'} axis={"x"} />
-			</div>
-			<div className='bottom-right'>
-				<Ticks numOfTicks={9} axis={"y"} />
-				<Numbers size={135} direction={'right'} axis={"y"} />
-			</div>
-		</section>
+		<main>
+			<Circles data={data} />
+			<Graph />
+		</main>
 	);
 }
 
